@@ -1,3 +1,4 @@
+/*
 let bebida
 let descuento = prompt('Si contestas bien a este calculo, te ganas un descuento del 25% \nescribe Ok para avanzar. ')
 const acertijo = () => {
@@ -16,7 +17,8 @@ const viajePrecio = prompt("Cada bebida vale 300 \nEscriba el precio que mencion
 const resta = (precio,descuento) =>   `${bebida} ${precio - descuento}`
 
 alert(resta(300,75));
-
+}
+*/
 class Bebida { 
     constructor(id,nombre,precio) {
         this.id= parseInt(id);
@@ -24,23 +26,20 @@ class Bebida {
         this.precio= parseFloat(precio);
     }
 }
+const bebidas =[];
+bebidas.push(new Bebida(1,'Licuado de Banana',250));
+bebidas.push(new Bebida(2,'Licuado de Frutilla',250));
+bebidas.push(new Bebida(2,'Daiquiri',300));
+bebidas.push(new Bebida(3,'Fernet',300));
+bebidas.push(new Bebida(3,'Jagermeister',400));
+console.log(bebidas);
 
-const productos = [];
-productos.push(new Bebida(1,'Licuado de Banana',250));
-productos.push(new Bebida(2,'Licuado de Frutilla',250));
-    productos.push(new Bebida(3,'Fernet',300));
-
-    console.log(productos);
-
-    for (let index = 0; index < productos.length; index++) {
-        console.log(productos[index].nombre);
-
-    alert("Bebidas que agregaremos proximamente"+"\n"+
-            "Bebida N"+productos[index].id+"\n"+
-            "Nombre "+productos[index].nombre+"\n"+
-            "Precio $ "+productos[index].precio)+"\n"
-    }
-
-
-
+for (const bebida of bebidas) {
+    let divBebida = document.createElement("div")
+    divBebida.innerHTML=`<h2>Bebidas que agregaremos proximamente</h2>
+                        <h2>Producto: ${bebida.nombre}</h2>
+                        <h2>Precio: $ ${bebida.precio} </h2>
+                        <hr> `;
+    document.body.append(divBebida);
+}
 
