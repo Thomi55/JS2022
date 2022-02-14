@@ -34,12 +34,26 @@ bebidas.push(new Bebida(3,'Fernet',300));
 bebidas.push(new Bebida(3,'Jagermeister',400));
 console.log(bebidas);
 
+let divBeb = document.getElementById("proximo");
+
 for (const bebida of bebidas) {
     let divBebida = document.createElement("div")
-    divBebida.innerHTML=`<h2>Bebidas que agregaremos proximamente</h2>
-                        <h2>Producto: ${bebida.nombre}</h2>
+    divBebida.innerHTML=`<h2>Bebida: ${bebida.nombre}</h2>
                         <h2>Precio: $ ${bebida.precio} </h2>
+                        <button id='${bebida.id}' class='botonComprar'>Precomprar</button>
                         <hr> `;
-    document.body.append(divBebida);
+    divBeb.append(divBebida);
+}
+
+let button = document.getElementsByClassName('botonComprar')
+console.log(button);
+
+for (const boton of button) {
+    boton.addEventListener("click", function () {
+        console.log(this.id);
+        let encontrar = bebidas.find(bebida => bebida.id==this.id);
+        console.log(encontrar);
+    })
+    
 }
 
