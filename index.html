@@ -1,43 +1,149 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrenamiento</title>
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-</head>
+    <title>Tienda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+ </head>
 <body>
-    <div class="navContainer">
-        <div class="navSecundario">
-            <ul>
-                <li><a href="index.html">Grace Bay Beach</a></li>
-            </ul>
+    <nav id="nav">
+        <div class="navTop">
+            <div class="navItem">
+                <img src="./img/sneakers.png" alt="">
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput">
+                    <img src="./img/59cfc4d2d3b1936210a5ddc7.png.crdownload.png" width="20" height="20" alt="" class="searchIcon">
+                </div>
+            </div>
+            <div id="container">
+                <span class="textoRelleno">Lorem ipsum dolor sit.</span>
+            </div>
         </div>
-        <div class="navPrimario">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Hoteles</a></li>
-                <li><a href="">Tours turisticos</a></li>
-                <li><a href="">Vuelos</a></li>
-            </ul>
+        <div class="navBottom">
+            <h3 class="menuItem">AIR FORCE</h3>
+            <h3 class="menuItem">JORDAN</h3>
+            <h3 class="menuItem">BLAZER</h3>
+            <h3 class="menuItem">CRATER</h3>
+            <h3 class="menuItem">HIPPIE</h3>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="sliderMover">
+            <div class="sliderItem">
+                <img src="./img/air.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">AIR FORCE</br></h1>
+                <h2 class="sliderPrice">$119</h2>
+                <a href="#producto">
+                    <button class="buyButton">COMPRAR AHORA</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/jordan.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">AIR JORDAN</br></h1>
+                <h2 class="sliderPrice">$149</h2>
+                <a href="#producto">
+                    <button class="buyButton">COMPRAR AHORA</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/blazer.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle"></h1>
+                <h2 class="sliderPrice">$109</h2>
+                <a href="#producto">
+                    <button class="buyButton">COMPRAR AHORA</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/crater.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">CRATER</br></h1>
+                <h2 class="sliderPrice">$129</h2>
+                <a href="#producto">
+                    <button class="buyButton">COMPRAR AHORA</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/hippie.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">HIPPIE</br></h1>
+                <h2 class="sliderPrice">$99</h2>
+                <a href="#producto">
+                    <button class="buyButton">COMPRAR AHORA</button>
+                </a>
+            </div>
         </div>
     </div>
-    <div class="imagen">
+    <div class="informacion">
+        <div class="feature">
+            <img src="./img/shipping.png" alt="" class="featureIcon">
+            <span class="featureTitle">ENVIOS</span>
+            <span class="featureDesc">Envio gratuito a todo el mundo</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/return.png" alt="">
+            <span class="featureTitle">30 DIAS DE DEVOLUCION</span>
+            <span class="featureDesc">Devolucion sin dudas y reembolso facil en 14 días</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/contact.png" alt="">
+            <span class="featureTitle">CONTACTANOS</span>
+            <span class="featureDesc">Mantengase en contacto por correo electronico</span>
+        </div>
     </div>
-    <div>
-        <h2 class="titulo">Queres trabajar con nosotros?Mandanos tu solicitud rellenando este formulario</h2>
-    </div>
-    <form id="guardarContacto">
-        <input type="text" placeholder="Ingrese su nombre">
-        <input type="number" placeholder="Ingrese su numero de celular">
-        <input type="text" placeholder="Ingrese su direccion">
-        <input type="Submit" value="Enviar">
-    </form>
-    
-    <div id="solicitud">
 
-    </div>
+    <div class="product" id="producto">
+        <img src="./img/air.png" alt="" class="productImg">
+        <div class="productDetails">
+            <h1 class="productTitle">AIR FORCE</h1>
+            <h2 class="productPrice">$119</h2>
+            <p class="productDesc">Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias assumenda
+                dolorum
+                doloremque sapiente aliquid aperiam.</p>
+            <div class="colores">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <div class="sizes">
+                <div class="size">42</div>
+                <div class="size">43</div>
+                <div class="size">44</div>
+            </div>
+            <button class="productButton">COMPRAR AHORA</button>
+        </div>
+        <div class="payment">
+            <h1 class="payTitle">Informacion personal</h1>
+            <label>Nombre y Apellido</label>
+            <input type="text" placeholder="Roger martinez" class="payInput">
+            <label>Numero de celular</label>
+            <input type="text" placeholder="+1 234 5678" class="payInput">
+            <label>Direccion</label>
+            <input type="text" placeholder="Lavalle St 21 22-145" class="payInput">
+            <h1 class="payTitle">Card Information</h1>
+            <div class="cardIcons">
+                <img src="./img/visa.png" width="40" alt="" class="cardIcon">
+                <img src="./img/master.png" alt="" width="40" class="cardIcon">
+            </div>
+            <input type="password" class="payInput" placeholder="Card Number">
+            <div class="cardInfo">
+                <input type="text" placeholder="mm" class="payInput sm">
+                <input type="text" placeholder="yyyy" class="payInput sm">
+                <input type="text" placeholder="cvv" class="payInput sm">
+            </div>
+            <button class="payButton">Checkout!</button>
+            <span class="close">X</span>
+            </div>
+        </div>
+        
 
-    <script src="js/main.js"> </script>
+    <script src="js/app.js"> </script>
 </body>
 </html>
