@@ -2,148 +2,227 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
- </head>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <title>Proyecto</title>
+</head>
+
 <body>
-    <nav id="nav">
-        <div class="navTop">
-            <div class="navItem">
-                <img src="./img/sneakers.png" alt="">
+
+    <header>
+        <div class="container">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
+                    <a class="navbar-brand" href="#"><img src="img/sneakers.png" class="nav-link dropdown-toggle img-fluid" height="70px"
+                        width="200px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"></img></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <img src="img/cart.png" class="nav-link dropdown-toggle img-fluid" height="50px"
+                                    width="50px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
-            <div class="navItem">
-                <div class="search">
-                    <input type="text" placeholder="Search..." class="searchInput">
-                    <img src="./img/59cfc4d2d3b1936210a5ddc7.png.crdownload.png" width="20" height="20" alt="" class="searchIcon">
+        </div>
+    </header>
+
+    <main>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 id = "tituloPrincipal" class="display-4 mt-4">Zapatillas</h1>
+            <p class="lead">Para comprar selecciona uno de nuestros productos y se te añadira al carro</p>
+        </div>
+
+        <div class="container" id="lista-productos">
+            
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Air Force</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/air.png" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">12000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Talle 42</li>
+                            <li>Color Negro</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
+                    </div>
                 </div>
-            </div>
-            <div id="container">
-                <span class="textoRelleno">Lorem ipsum dolor sit.</span>
-            </div>
-        </div>
-        <div class="navBottom">
-            <h3 class="menuItem">AIR FORCE</h3>
-            <h3 class="menuItem">JORDAN</h3>
-            <h3 class="menuItem">BLAZER</h3>
-            <h3 class="menuItem">CRATER</h3>
-            <h3 class="menuItem">HIPPIE</h3>
-        </div>
-    </nav>
-    <div class="slider">
-        <div class="sliderMover">
-            <div class="sliderItem">
-                <img src="./img/air.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">AIR FORCE</br></h1>
-                <h2 class="sliderPrice">$119</h2>
-                <a href="#producto">
-                    <button class="buyButton">COMPRAR AHORA</button>
-                </a>
-            </div>
-            <div class="sliderItem">
-                <img src="./img/jordan.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">AIR JORDAN</br></h1>
-                <h2 class="sliderPrice">$149</h2>
-                <a href="#producto">
-                    <button class="buyButton">COMPRAR AHORA</button>
-                </a>
-            </div>
-            <div class="sliderItem">
-                <img src="./img/blazer.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle"></h1>
-                <h2 class="sliderPrice">$109</h2>
-                <a href="#producto">
-                    <button class="buyButton">COMPRAR AHORA</button>
-                </a>
-            </div>
-            <div class="sliderItem">
-                <img src="./img/crater.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">CRATER</br></h1>
-                <h2 class="sliderPrice">$129</h2>
-                <a href="#producto">
-                    <button class="buyButton">COMPRAR AHORA</button>
-                </a>
-            </div>
-            <div class="sliderItem">
-                <img src="./img/hippie.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">HIPPIE</br></h1>
-                <h2 class="sliderPrice">$99</h2>
-                <a href="#producto">
-                    <button class="buyButton">COMPRAR AHORA</button>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="informacion">
-        <div class="feature">
-            <img src="./img/shipping.png" alt="" class="featureIcon">
-            <span class="featureTitle">ENVIOS</span>
-            <span class="featureDesc">Envio gratuito a todo el mundo</span>
-        </div>
-        <div class="feature">
-            <img class="featureIcon" src="./img/return.png" alt="">
-            <span class="featureTitle">30 DIAS DE DEVOLUCION</span>
-            <span class="featureDesc">Devolucion sin dudas y reembolso facil en 14 días</span>
-        </div>
-        <div class="feature">
-            <img class="featureIcon" src="./img/contact.png" alt="">
-            <span class="featureTitle">CONTACTANOS</span>
-            <span class="featureDesc">Mantengase en contacto por correo electronico</span>
-        </div>
-    </div>
 
-    <div class="product" id="producto">
-        <img src="./img/air.png" alt="" class="productImg">
-        <div class="productDetails">
-            <h1 class="productTitle">AIR FORCE</h1>
-            <h2 class="productPrice">$119</h2>
-            <p class="productDesc">Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias assumenda
-                dolorum
-                doloremque sapiente aliquid aperiam.</p>
-            <div class="colores">
-                <div class="color"></div>
-                <div class="color"></div>
-            </div>
-            <div class="sizes">
-                <div class="size">42</div>
-                <div class="size">43</div>
-                <div class="size">44</div>
-            </div>
-            <button class="productButton">COMPRAR AHORA</button>
-        </div>
-        <div class="payment">
-            <h1 class="payTitle">Informacion personal</h1>
-            <label>Nombre y Apellido</label>
-            <input type="text" placeholder="Roger martinez" class="payInput">
-            <label>Numero de celular</label>
-            <input type="text" placeholder="+1 234 5678" class="payInput">
-            <label>Direccion</label>
-            <input type="text" placeholder="Lavalle St 21 22-145" class="payInput">
-            <h1 class="payTitle">Card Information</h1>
-            <div class="cardIcons">
-                <img src="./img/visa.png" width="40" alt="" class="cardIcon">
-                <img src="./img/master.png" alt="" width="40" class="cardIcon">
-            </div>
-            <input type="password" class="payInput" placeholder="Card Number">
-            <div class="cardInfo">
-                <input type="text" placeholder="mm" class="payInput sm">
-                <input type="text" placeholder="yyyy" class="payInput sm">
-                <input type="text" placeholder="cvv" class="payInput sm">
-            </div>
-            <button class="payButton">Checkout!</button>
-            <span class="close">X</span>
-            </div>
-        </div>
-        
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Air Force</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/air2.png" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">12000</span></h1>
 
-    <script src="js/app.js"> </script>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Talle 42</li>
+                            <li>Color Azul</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Blazer</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/blazer.png" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">6000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Talle 42</li>
+                            <li>Color Blanco</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Blazer</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/blazer2.png" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">6000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Talle 42</li>
+                            <li>Color Verde</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="4">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Hippie</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/hippie.png" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">5900</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Talle 42</li>
+                            <li>Color Celeste</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="5">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="zapatillas">
+                        <h4 class="my-0 font-weight-bold">Hippie</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/hippie2.png" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">5900</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Talle 42</li>
+                            <li>Color Grises</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="6">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="zapatillas">
+                        <h4 class="my-0 font-weight-bold">Jordan</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/jordan.png" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">8000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Talle 42</li>
+                            <li>Color Blancas</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="7">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="zapatillas">
+                        <h4 class="my-0 font-weight-bold">Jordan</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/jordan2.png" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">8000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Talle 42</li>
+                            <li>Color Verde</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="8">Comprar</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </main>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+
 </body>
+
 </html>

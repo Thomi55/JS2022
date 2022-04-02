@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: beige;
     padding: 0;
     margin: 0;
   }
@@ -12,6 +13,14 @@ body {
     background-color: rgb(10, 0, 100);
     color: white;
     padding: 30px 40px;
+  }
+
+  tituloPrincipal{
+    color: rgb(73, 60, 60);
+  }
+
+  .lead{
+    color: rgb(70, 55, 55);
   }
   
   .navTop {
